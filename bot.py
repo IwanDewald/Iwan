@@ -9,7 +9,7 @@ import storage
 import cherrypy
 
 WEBHOOK_HOST = '185.173.94.154'
-WEBHOOK_PORT = 443  
+WEBHOOK_PORT = 80 
 WEBHOOK_LISTEN = '0.0.0.0'  
 
 WEBHOOK_SSL_CERT = './webhook_cert.pem' 
