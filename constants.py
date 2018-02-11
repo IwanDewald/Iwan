@@ -26,11 +26,11 @@ order = '\N{TEACUP WITHOUT HANDLE}' + u'Сделать предзаказ'
 
 select_language = u'Выберите язык\nSelect your language '
 language_selected =u'Язык устанвлен             \nВыберите один из пунктов меню'
-ru ='\N{REGIONAL INDICATOR SYMBOL LETTER R}'+'\N{REGIONAL INDICATOR SYMBOL LETTER U}'+u'Русский'
-eng = '\N{REGIONAL INDICATOR SYMBOL LETTER G}'+'\N{REGIONAL INDICATOR SYMBOL LETTER B}'+u'English'
+ru =u'\N{REGIONAL INDICATOR SYMBOL LETTER R}'+'\N{REGIONAL INDICATOR SYMBOL LETTER U}'+u'Русский'
+eng = u'\N{REGIONAL INDICATOR SYMBOL LETTER G}'+'\N{REGIONAL INDICATOR SYMBOL LETTER B}'+u'English'
 
-coffee = '\N{TEACUP WITHOUT HANDLE}' + 'Кофе'
-dessert = '\N{SHORTCAKE}' + 'Десерты'
+coffee = u'\N{TEACUP WITHOUT HANDLE}' + 'Кофе'
+dessert = u'\N{SHORTCAKE}' + 'Десерты'
 sandwitch = '\N{HAMBURGER}' + 'Сэндвичи'
 
 
