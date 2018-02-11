@@ -119,7 +119,7 @@ def back_to_redact(call):
 	storage.get_user_string(call.message.chat.id)
 	app_form = utils.send_app_form(storage.get_user_string(call.message.chat.id))
 	keyboard = telebot.types.InlineKeyboardMarkup()
-	callback_button1 = telebot.types.InlineKeyboardButton(text="Редактировать профиль", callback_data="redact")
+	callback_button1 = telebot.types.InlineKeyboardButton(text=u"Редактировать профиль", callback_data="redact")
 	keyboard.add(callback_button1)
 	bot.edit_message_text(chat_id =call.message.chat.id, text=app_form, message_id=call.message.message_id, reply_markup=keyboard)
 
