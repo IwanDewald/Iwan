@@ -21,17 +21,17 @@ redact_favorite = u'Выберите свой любимый кофе'
 back = u'Назад'
 back_to_menu = u'Назад'
 
-redact_profile = '\N{BUSTS IN SILHOUETTE}' + u'Редактировать профиль'
-order = '\N{TEACUP WITHOUT HANDLE}' + u'Сделать предзаказ'
+redact_profile = u'\N{BUSTS IN SILHOUETTE}' + u'Редактировать профиль'
+order = u'\N{TEACUP WITHOUT HANDLE}' + u'Сделать предзаказ'
 
 select_language = u'Выберите язык\nSelect your language '
 language_selected =u'Язык устанвлен             \nВыберите один из пунктов меню'
-ru =u'\N{REGIONAL INDICATOR SYMBOL LETTER R}'+'\N{REGIONAL INDICATOR SYMBOL LETTER U}'+u'Русский'
-eng = u'\N{REGIONAL INDICATOR SYMBOL LETTER G}'+'\N{REGIONAL INDICATOR SYMBOL LETTER B}'+u'English'
+ru =u'\N{REGIONAL INDICATOR SYMBOL LETTER R}'+u'\N{REGIONAL INDICATOR SYMBOL LETTER U}'+u'Русский'
+eng = u'\N{REGIONAL INDICATOR SYMBOL LETTER G}'+u'\N{REGIONAL INDICATOR SYMBOL LETTER B}'+u'English'
 
 coffee = u'\N{TEACUP WITHOUT HANDLE}' + 'Кофе'
 dessert = u'\N{SHORTCAKE}' + 'Десерты'
-sandwitch = '\N{HAMBURGER}' + 'Сэндвичи'
+sandwitch = u'\N{HAMBURGER}' + 'Сэндвичи'
 
 
 
@@ -43,10 +43,10 @@ coffee_menu = u"""
 coffee_list =  [{'text':u'Латте 400мл./180р.','call':'Latte_180','price':180}, {'text':u'Латте 250мл./120р.','call':'Latte_120','price':120}, {'text':u'Мокко  400мл./150р.','call':'Mocco_150','price':150}, {'text':u'Мокко 250мл./100р.','call':'Mocco_100','price':100}, {'text':u'Ванильный раф 400мл./150р.','call':'Ruff_150','price':150}]
 coffee_calls = ['Latte_180','Latte_120','Mocco_150','Mocco_100','Ruff_150']
 coffee_ru = {'Latte_180': u'Латте 400мл./180р.', 'Latte_120':u'Латте 250мл./120р.','Mocco_150': u'Мокко  400мл./150р.','Mocco_100': u'Мокко 250мл./100р.','Ruff_150': u'Ванильный раф 400мл./150р.' }
-minus = '\N{HEAVY MINUS SIGN}'
-plus = '\N{HEAVY PLUS SIGN}'
+minus = u'\N{HEAVY MINUS SIGN}'
+plus = u'\N{HEAVY PLUS SIGN}'
 
-checkout = '\N{HEAVY EXCLAMATION MARK SYMBOL}'+u'Оформить заказ'+'\N{HEAVY EXCLAMATION MARK SYMBOL}'
+checkout = u'\N{HEAVY EXCLAMATION MARK SYMBOL}'+u'Оформить заказ'+u'\N{HEAVY EXCLAMATION MARK SYMBOL}'
 
 to_bill = 'р. к чеку'
 from_bill = 'р. из чека'
