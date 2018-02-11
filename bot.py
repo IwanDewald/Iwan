@@ -40,6 +40,7 @@ bot = telebot.TeleBot(config.token)
 
 @bot.message_handler(commands=["start"])
 def select_language(message):
+	print(bot.get_webhook_info() )
 	storage.set_user_string(message.chat.id)
 	keyboard = telebot.types.InlineKeyboardMarkup()
 	keyboard.add(telebot.types.InlineKeyboardButton(text=constants.ru, callback_data='ru'))
