@@ -6,6 +6,34 @@ import config
 import constants 
 import utils
 import storage
+import cherrypy
+
+WEBHOOK_HOST = '185.173.94.154'
+WEBHOOK_PORT = 443  
+WEBHOOK_LISTEN = '0.0.0.0'  
+
+WEBHOOK_SSL_CERT = './webhook_cert.pem' 
+WEBHOOK_SSL_PRIV = './webhook_pkey.pem'  
+
+WEBHOOK_URL_BASE = "https://%s:%s" % (WEBHOOK_HOST, WEBHOOK_PORT)
+WEBHOOK_URL_PATH = "/%s/" % (config.token)
+
+
+class WebhookServer(object):
+    @cherrypy.expose
+    def index(self):
+        if 'content-length' in cherrypy.request.headers and \
+                        'content-type' in cherrypy.request.headers and \
+                        cherrypy.request.headers['content-type'] == 'application/json':
+            length = int(cherrypy.request.headers['content-length'])
+            json_string = cherrypy.request.body.read(length).decode("utf-8")
+            update = telebot.types.Update.de_json(json_string)
+            
+            bot.process_new_updates([update])
+            return ''
+        else:
+            raise cherrypy.HTTPError(403)
+
 bot = telebot.TeleBot(config.token)
 
 
@@ -142,7 +170,7 @@ def redact_order(call):
 		storage.remove_from_order(chat_id=call.message.chat.id,data=call.data[1:])
 		print(storage.get_user_string(chat_id=call.message.chat.id))
 		bot.answer_callback_query(callback_query_id=call.id, show_alert=False, text='-'+str(call.data[-3:])+'р. из чека')
-		#call.data in constants.coffee_calls or
+		
 	mes_text = utils.send_order_list(call.message.chat.id)
 	keyboard = telebot.types.InlineKeyboardMarkup()
 	for i in constants.coffee_list:
@@ -178,6 +206,18 @@ def photo(message):
 	print(message.photo[2])
 	bot.send_message(chat_id = message.chat.id, text = message.photo[2])
 
+bot.remove_webhook()
 
-if __name__ == '__main__':
-	bot.polling(none_stop=True)
+ 
+bot.set_webhook(url=WEBHOOK_URL_BASE + WEBHOOK_URL_PATH,
+                certificate=open(WEBHOOK_SSL_CERT, 'r'))
+cherrypy.config.update({
+    'server.socket_host': WEBHOOK_LISTEN,
+    'server.socket_port': WEBHOOK_PORT,
+    'server.ssl_module': 'builtin',
+    'server.ssl_certificate': WEBHOOK_SSL_CERT,
+    'server.ssl_private_key': WEBHOOK_SSL_PRIV
+})
+
+cherrypy.quickstart(WebhookServer(), WEBHOOK_URL_PATH, {'/': {}})
+

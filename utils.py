@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from constants import app_form_ru, app_form, coffee_ru
 import storage
 import constants

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 app_form_warning = 'Для продолжения работы заполните анкету'
 
 app_form = {'name' : None, 'country' : None, 'city' : None, 'occupation' : None, 'birthdate' : None, 'favorite' : None, 'editing_item':None, 'order' : []}
