@@ -1,5 +1,5 @@
 
-#!/usr/bin/env python
+#!/usr/bin/venv python
 # -*- coding: utf-8 -*-
 import telebot
 import config
@@ -150,11 +150,11 @@ def redact_order(call):
 	if   call.data[0] == '+':
 		storage.add_to_order(chat_id=call.message.chat.id,data=call.data[1:])
 		print(storage.get_user_string(chat_id=call.message.chat.id))
-		bot.answer_callback_query(callback_query_id=call.id, show_alert=False, text='+'+str(call.data[-3:])+'р. к чеку')
+		bot.answer_callback_query(callback_query_id=call.id, show_alert=False, text='+'+str(call.data[-3:])+u'р. к чеку')
 	if call.data[0] == '-':
 		storage.remove_from_order(chat_id=call.message.chat.id,data=call.data[1:])
 		print(storage.get_user_string(chat_id=call.message.chat.id))
-		bot.answer_callback_query(callback_query_id=call.id, show_alert=False, text='-'+str(call.data[-3:])+'р. из чека')
+		bot.answer_callback_query(callback_query_id=call.id, show_alert=False, text='-'+str(call.data[-3:])+u'р. из чека')
 		
 	mes_text = utils.send_order_list(call.message.chat.id)
 	keyboard = telebot.types.InlineKeyboardMarkup()
