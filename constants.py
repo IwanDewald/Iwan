@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-app_form_warning = 'Для продолжения работы заполните анкету'
+app_form_warning = u'Для продолжения работы заполните анкету'
 
 app_form = {'name' : None, 'country' : None, 'city' : None, 'occupation' : None, 'birthdate' : None, 'favorite' : None, 'editing_item':None, 'order' : []}
-app_form_ru = {'name' : 'Имя', 'country' : 'Страна', 'city' : 'Город', 'occupation' : 'Род занятий', 'birthdate' : 'Дата рождения', 'favorite' : 'Любимый кофе' }
+app_form_ru = {'name' : u'Имя', 'country' : u'Страна', 'city' : u'Город', 'occupation' : u'Род занятий', 'birthdate' : u'Дата рождения', 'favorite' : u'Любимый кофе' }
 
-empty_order="""
+empty_order=u"""
 *============================*
 
 *Ваш заказ пуст*
@@ -12,17 +12,17 @@ empty_order="""
 *============================*
 """
 
-redact_name = 'Введите имя'
-redact_country = 'Ведите название страны'
-redact_city = 'Введите название города'
-redact_occupation = 'Род деятельности'
-redact_birthdate = "Введите дату Вашего рождения в формате дд.мм (e.g. 31.05)"
-redact_favorite = 'Выберите свой любимый кофе'
-back = 'Назад'
-back_to_menu = 'Назад'
+redact_name = u'Введите имя'
+redact_country = u'Ведите название страны'
+redact_city = u'Введите название города'
+redact_occupation = u'Род деятельности'
+redact_birthdate = u"Введите дату Вашего рождения в формате дд.мм (e.g. 31.05)"
+redact_favorite = u'Выберите свой любимый кофе'
+back = u'Назад'
+back_to_menu = u'Назад'
 
-redact_profile = '\N{BUSTS IN SILHOUETTE}' + 'Редактировать профиль'
-order = '\N{TEACUP WITHOUT HANDLE}' + 'Сделать предзаказ'
+redact_profile = '\N{BUSTS IN SILHOUETTE}' + u'Редактировать профиль'
+order = '\N{TEACUP WITHOUT HANDLE}' + u'Сделать предзаказ'
 
 select_language = 'Выберите язык\nSelect your language '
 language_selected = 'Язык устанвлен             \nВыберите один из пунктов меню'
