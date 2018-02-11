@@ -167,7 +167,7 @@ def redact_order(call):
 
 @bot.callback_query_handler(func=lambda call: call.data == 'checkout')
 def checkout(call):
-	bot.answer_callback_query(callback_query_id=call.id, show_alert=False, text='Заказ оформлен!')
+	bot.answer_callback_query(callback_query_id=call.id, show_alert=False, text=constants.zakaz)
 
 
 @bot.message_handler(content_types=["text"])

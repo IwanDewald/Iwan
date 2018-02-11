@@ -50,3 +50,5 @@ checkout = '\N{HEAVY EXCLAMATION MARK SYMBOL}'+u'Оформить заказ'+'\
 
 to_bill = 'р. к чеку'
 from_bill = 'р. из чека'
+
+zakaz = 'Заказ оформлен!'
