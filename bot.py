@@ -34,7 +34,7 @@ class WebhookServer(object):
         else:
             raise cherrypy.HTTPError(403)
 
-bot = telebot.TeleBot(config.token,threaded=False)
+bot = telebot.TeleBot(config.token)
 
 
 
