@@ -21,7 +21,7 @@ redact_favorite = u'Выберите свой любимый кофе'
 back = u'Назад'
 back_to_menu = u'Назад'
 
-redact_profile = '\N{BUSTS IN SILHOUETTE}' + 'Редактировать профиль'
+redact_profile = '\N{BUSTS IN SILHOUETTE}' + u'Редактировать профиль'
 order = '\N{TEACUP WITHOUT HANDLE}' + 'Сделать предзаказ'
 
 select_language = u'Выберите язык\nSelect your language '
