@@ -191,12 +191,13 @@ def edit_app_form(message):
 def photo(message):
 	print(message.photo[2])
 	bot.send_message(chat_id = message.chat.id, text = message.photo[2])
-
+"""
 bot.remove_webhook()
 
  
 bot.set_webhook(url=WEBHOOK_URL_BASE + WEBHOOK_URL_PATH,
                 certificate=open(WEBHOOK_SSL_CERT, 'r'))
+"""
 cherrypy.config.update({
     'server.socket_host': WEBHOOK_LISTEN,
     'server.socket_port': WEBHOOK_PORT,
