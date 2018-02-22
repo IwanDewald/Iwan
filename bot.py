@@ -1,6 +1,7 @@
 
 #!/usr/bin/venv python
 # -*- coding: utf-8 -*-
+import os
 import telebot
 import config
 import constants 
