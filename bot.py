@@ -2,13 +2,17 @@
 #!/usr/bin/venv python
 # -*- coding: utf-8 -*-
 import os
+import socket
+
 import telebot
+from flask import Flask, request
+
 import config
 import constants 
 import utils
 import storage
-from flask import Flask, request
 # import cherrypy
+
 
 # WEBHOOK_HOST = '93.170.131.202'
 # WEBHOOK_PORT = 443 
@@ -39,7 +43,8 @@ from flask import Flask, request
 bot = telebot.TeleBot(config.token)
 
 app = Flask(__name__)
-URL_PATH = '/{}'.format(config.token)
+URL_PATH = '{}/{}'.format(socket.gethostname(), config.token)
+print(socket.gethostname())
 
 # ловим ответ от телеграмма
 @app.route("/{}".format(config.token), methods=['POST'])
