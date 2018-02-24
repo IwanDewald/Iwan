@@ -232,5 +232,5 @@ def photo(message):
 # cherrypy.quickstart(WebhookServer(), WEBHOOK_URL_PATH, {'/': {}})
 
 if __name__ == '__main__':
-	app.run(port=os.environ.get('PORT', 5000))
+	app.run(port=os.environ.get('PORT', 8080))
 
