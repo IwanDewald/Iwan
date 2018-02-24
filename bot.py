@@ -53,7 +53,6 @@ def getMessage():
     return ''
 
 
-# Устанавливаем веб-хук (который не устанавливается отсюда)
 @app.route("/")
 def webhook():
     print('webhook')
