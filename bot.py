@@ -53,12 +53,12 @@ def getMessage():
     return ''
 
 
-# Устанавливаем веб-хук (который не устанавливается отсюда)
-# @app.route("/")
-# def webhook():
-#     bot.remove_webhook()
-#     bot.set_webhook(url=URL_PATH, sertificate=open('public.pem', 'r'))
-#     return ''
+Устанавливаем веб-хук (который не устанавливается отсюда)
+@app.route("/")
+def webhook():
+    bot.remove_webhook()
+    bot.set_webhook(url=URL_PATH, sertificate=open('public.pem', 'r'))
+    return ''
 
 
 @bot.message_handler(commands=["start"])
@@ -232,5 +232,5 @@ def photo(message):
 # cherrypy.quickstart(WebhookServer(), WEBHOOK_URL_PATH, {'/': {}})
 
 if __name__ == '__main__':
-	app.run(port=os.environ.get('PORT', 8080))
+	app.run(port=os.environ.get('PORT', 5000))
 
