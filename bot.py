@@ -56,6 +56,7 @@ def getMessage():
 # Устанавливаем веб-хук (который не устанавливается отсюда)
 @app.route("/")
 def webhook():
+    print('webhook')
     bot.remove_webhook()
     bot.set_webhook(url=URL_PATH, sertificate=open('public.pem', 'r'))
     return ''
