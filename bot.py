@@ -46,7 +46,7 @@ app = Flask(__name__)
 URL_PATH = 'https://3466532a.ngrok.io/531911280:AAHoFolyb09Fi8PCHNZkOaZmadxwhth4F1U'
 print(socket.gethostname())
 
-# ловим ответ от телеграмма
+
 @app.route("/{}".format(config.token), methods=['GET', 'POST'])
 def getMessage():
     bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
