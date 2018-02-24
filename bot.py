@@ -57,7 +57,7 @@ def getMessage():
 @app.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url=URL_PATH)
+    bot.set_webhook(url=URL_PATH, sertificate=open('public.pem', 'r'))
     return ''
 
 
