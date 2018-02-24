@@ -44,7 +44,7 @@ import storage
 bot = telebot.TeleBot(config.token)
 
 app = Flask(__name__)
-URL_PATH = 'https://93.170.131.202/531911280:AAHoFolyb09Fi8PCHNZkOaZmadxwhth4F1U'
+URL_PATH = 'https://3466532a.ngrok.io/531911280:AAHoFolyb09Fi8PCHNZkOaZmadxwhth4F1U'
 print(socket.gethostname())
 
 # ловим ответ от телеграмма
@@ -235,5 +235,5 @@ def photo(message):
 
 app.wsgi_app = ProxyFix(app.wsgi_app)
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
+	app.run(port=os.environ.get('PORT', 5000))
 
