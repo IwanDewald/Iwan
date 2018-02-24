@@ -43,7 +43,7 @@ import storage
 bot = telebot.TeleBot(config.token)
 
 app = Flask(__name__)
-URL_PATH = '{}/{}'.format(socket.gethostname(), config.token)
+URL_PATH = 'https://93.170.131.202/531911280:AAHoFolyb09Fi8PCHNZkOaZmadxwhth4F1U'
 print(socket.gethostname())
 
 # ловим ответ от телеграмма
