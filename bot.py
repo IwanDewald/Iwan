@@ -6,6 +6,7 @@ import socket
 
 import telebot
 from flask import Flask, request
+from werkzeug.contrib.fixers import ProxyFix
 
 import config
 import constants 
@@ -232,6 +233,7 @@ def photo(message):
 
 # cherrypy.quickstart(WebhookServer(), WEBHOOK_URL_PATH, {'/': {}})
 
+app.wsgi_app = ProxyFix(app.wsgi_app)
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
 
