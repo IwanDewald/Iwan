@@ -16,7 +16,7 @@ import storage
 bot = telebot.TeleBot(config.token)
 
 app = Flask(__name__)
-URL_PATH = 'https://4b8b80f8.ngrok.io/531911280:AAHoFolyb09Fi8PCHNZkOaZmadxwhth4F1U'
+URL_PATH = 'https://095621c6.ngrok.io/531911280:AAHoFolyb09Fi8PCHNZkOaZmadxwhth4F1U'
 print(socket.gethostname())
 
 
@@ -30,7 +30,7 @@ def getMessage():
 def webhook():
     print('webhook')
     bot.remove_webhook()
-    bot.set_webhook(url=URL_PATH, certificate=open('public.pem', 'r'))
+    bot.set_webhook(url=URL_PATH)
     return ''
 
 
