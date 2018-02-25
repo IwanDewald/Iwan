@@ -16,7 +16,7 @@ import storage
 bot = telebot.TeleBot(config.token)
 
 app = Flask(__name__)
-URL_PATH = 'https://3466532a.ngrok.io/531911280:AAHoFolyb09Fi8PCHNZkOaZmadxwhth4F1U'
+URL_PATH = 'https:// https://4b8b80f8.ngrok.io/531911280:AAHoFolyb09Fi8PCHNZkOaZmadxwhth4F1U'
 print(socket.gethostname())
 
 
