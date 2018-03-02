@@ -2,7 +2,6 @@
 #!/usr/bin/venv python
 # -*- coding: utf-8 -*-
 import os
-import socket
 
 import telebot
 from flask import Flask, request
@@ -16,9 +15,6 @@ import storage
 bot = telebot.TeleBot(config.token)
 
 app = Flask(__name__)
-URL_PATH = 'https://095621c6.ngrok.io/531911280:AAHoFolyb09Fi8PCHNZkOaZmadxwhth4F1U'
-print(socket.gethostname())
-
 
 @app.route("/{}".format(config.token), methods=['GET', 'POST'])
 def getMessage():
