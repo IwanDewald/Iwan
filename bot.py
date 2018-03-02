@@ -13,7 +13,6 @@ import storage
 
 
 bot = telebot.TeleBot(config.token)
-
 app = Flask(__name__)
 
 @app.route("/{}".format(config.token), methods=['GET', 'POST'])
@@ -26,7 +25,7 @@ def getMessage():
 def webhook():
     print('webhook')
     bot.remove_webhook()
-    bot.set_webhook(url=URL_PATH)
+    bot.set_webhook(url=config.app_address)
     return ''
 
 
